@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo de Perfumes</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Perfumaria Elegance</h1>
+      <nav>
+        <ul class="menu">
+          <li>
+            <a href="#masculino">Perfumes Masculinos</a>
+            <ul class="submenu">
+              <li><a href="#masculino-dia">Perfumes para o Dia</a></li>
+              <li><a href="#masculino-noite">Perfumes para a Noite</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#feminino">Perfumes Femininos</a>
+            <ul class="submenu">
+              <li><a href="#feminino-dia">Perfumes para o Dia</a></li>
+              <li><a href="#feminino-noite">Perfumes para a Noite</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#carrinho">Carrinho <span id="carrinho-qtd">(0)</span></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="filtros">
+      <input type="text" id="busca-nome" placeholder="Buscar por nome..." />
+      <select id="filtro-ml">
+        <option value="">Selecione o volume (ml)</option>
+        <option value="30">30ml</option>
+        <option value="50">50ml</option>
+        <option value="100">100ml</option>
+      </select>
+      <select id="filtro-tipo">
+        <option value="">Selecione o tipo</option>
+        <option value="dia">Dia</option>
+        <option value="noite">Noite</option>
+      </select>
+    </div>
+
+    <main>
+      <section id="masculino">
+        <h2>Perfumes Masculinos</h2>
+        <div id="masculino-dia" class="produtos-grid"></div>
+        <div id="masculino-noite" class="produtos-grid"></div>
+      </section>
+
+      <section id="feminino">
+        <h2>Perfumes Femininos</h2>
+        <div id="feminino-dia" class="produtos-grid"></div>
+        <div id="feminino-noite" class="produtos-grid"></div>
+      </section>
+
+      <section id="carrinho" class="carrinho">
+        <h2>Carrinho de Compras</h2>
+        <div id="itens-carrinho"></div>
+        <div class="total">
+          <p>Total: R$ <span id="valor-total">0,00</span></p>
+          <button id="finalizar-compra" onclick="finalizarCompra()">
+            Finalizar Compra
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
